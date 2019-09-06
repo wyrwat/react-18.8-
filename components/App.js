@@ -1,6 +1,6 @@
 App = React.createClass({
     render: function() {
-        //dlaczego style pojawiaja sie w komponecie?
+        //dlaczego style pojawiaja sie w komponecie?czy nie latwiej stylowac w css?
         var styles = {
             margin: '0 auto',
             textAlign: 'center',

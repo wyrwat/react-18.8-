@@ -5,7 +5,7 @@ var styles = {
 };
 
 Gif = React.createClass({
-    getURl: function() {
+    getUrl: function() {
         return this.props.sourceUrl || GIPHY_LOADING_URL;
     },
     render: function() {
