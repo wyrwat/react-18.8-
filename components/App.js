@@ -1,4 +1,12 @@
 App = React.createClass({
+    getInitialState() {
+        return {
+            loading: false,
+            searchingText: '',
+            gif: {}    
+        };
+    },
+
     render: function() {
         //dlaczego style pojawiaja sie w komponecie?czy nie latwiej stylowac w css?
         var styles = {
