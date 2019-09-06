@@ -12,7 +12,11 @@ App = React.createClass({
                 <h1>Gif Browser</h1>
                 <p>Find Gif on <a href='http://giphy.com'>giphy</a>Press Enter to downlod gif</p>
                 <Search/>
-              <Gif/>      
+              <Gif
+                loading={this.state.loading}
+                url={this.state.gif.url}
+                sourceUrl={this.state.gif.sourceUrl}
+              />      
             </div>
         );
     }
