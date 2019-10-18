@@ -9,7 +9,6 @@ App = React.createClass({
             gif: {}    
         };
     },
-
     handleSearch: function(searchingText) { 
         this.setState({
           loading: true  
@@ -22,7 +21,7 @@ App = React.createClass({
           });
         }.bind(this));
       },
-
+    //19.6 exercise start hire:
     getGif: function(searchingText, callback) { 
         let url = GIPHY_API_URL + '/v1/gifs/random?api_key=' + GIPHY_PUB_KEY + '&tag=' + searchingText; 
         let xhr = new XMLHttpRequest(); 
@@ -31,8 +30,8 @@ App = React.createClass({
             if (xhr.status === 200) {
                var data = JSON.parse(xhr.responseText).data; 
                 var gif = {  
-                    url: data.fixed_width_downsampled_url,
-                    sourceUrl: data.url
+                    url: data[0].images.fixed_width_downsampled.url,
+                    sourceUrl: data[0].url,
                 };
                 callback(gif); 
             }
